@@ -17,7 +17,7 @@ int main() {
 
 	std::vector<Man>::iterator itm;
 	std::vector<Woman>::iterator itw;
-
+	
 	Ali.setName("Ali");
 	Veli.setName("Veli");
 	Ahmet.setName("Ahmet");
@@ -106,7 +106,7 @@ int main() {
 			{
 				std::vector<Woman> prefList = man.getPrefList();
 				bool st = man.getStatus();
-
+	
 				if (!st)
 				{
 					// Kendine teklif getiren kizlara bakacak. Listede kendi nisanlisindan daha ustte biri varsa nisan atip yeni adayla nisanlanacak. 

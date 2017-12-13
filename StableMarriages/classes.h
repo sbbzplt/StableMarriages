@@ -125,6 +125,10 @@ void Man::setMessageBox(Woman wIn) {
 	messageBox.push_back(wIn);
 }
 
+std::vector<Woman> Man::getMessageBox() {
+	return messageBox;
+}
+
 void Man::setFiance(Woman *fianceIn) {
 	fiance = fianceIn;
 }
@@ -137,10 +141,7 @@ Woman* Man::getFiance() {
 
 Woman::Woman() {
 
-}
-
-std::vector<Woman> Man::getMessageBox() {
-	return messageBox;
+	round = 0;
 }
 
 void Woman::setPrefList(Man mIn) {
