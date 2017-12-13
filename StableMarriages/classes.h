@@ -12,12 +12,15 @@ class Person {
 private:
 	std::string name;
 	bool maritalStatus;
+	int index;
 public:
 	Person();
 	void setName(std::string nameIn);
 	std::string getName();
 	void setStatus(bool statusIn);
 	bool getStatus();
+	void setIndex(int indexIn);
+	int getIndex();
 };
 
 class Man : public Person {
@@ -49,6 +52,7 @@ public:
 Person::Person() {
 	name = "undeclared";
 	maritalStatus = false;
+	index = 0;
 }
 
 void Person::setName(std::string nameIn) {
@@ -65,6 +69,14 @@ void Person::setStatus(bool statusIn) {
 
 bool Person::getStatus() {
 	return maritalStatus;
+}
+
+void Person::setIndex(int indexIn) {
+	index = indexIn;
+}
+
+int Person::getIndex() {
+	return index;
 }
 
 
