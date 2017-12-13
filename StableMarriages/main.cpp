@@ -4,10 +4,13 @@ int main() {
 
 	Man Ali;
 	Man Veli; 
-	Man Hasan;
+	Man Ahmet;
+	Man Mehmet;
+
 	Woman Ayse;
 	Woman Fatma;
-	Woman Hayriye;
+	Woman Zeynep;
+	Woman Kadriye;
 
 	bool isAllEngaged = false;
 	int population = 3;
@@ -17,36 +20,55 @@ int main() {
 
 	Ali.setName("Ali");
 	Veli.setName("Veli");
-	Hasan.setName("Hasan");
+	Ahmet.setName("Ahmet");
+	Mehmet.setName("Mehmet");
+
 	Ayse.setName("Ayse");
 	Fatma.setName("Fatma");
-	Hayriye.setName("Hayriye");
+	Zeynep.setName("Zeynep");
+	Kadriye.setName("Kadriye");
 
-	Ali.setPrefList(Hayriye);
-	Ali.setPrefList(Fatma);
 	Ali.setPrefList(Ayse);
+	Ali.setPrefList(Zeynep);
+	Ali.setPrefList(Kadriye);
+	Ali.setPrefList(Fatma);
 	std::vector<Woman> womanList = Ali.getPrefList();
 
-	Veli.setPrefList(Ayse);
-	Veli.setPrefList(Hayriye);
+	Veli.setPrefList(Zeynep);
 	Veli.setPrefList(Fatma);
+	Veli.setPrefList(Kadriye);
+	Veli.setPrefList(Ayse);
 
-	Hasan.setPrefList(Fatma);
-	Hasan.setPrefList(Ayse);
-	Hasan.setPrefList(Hayriye);
+	Ahmet.setPrefList(Kadriye);
+	Ahmet.setPrefList(Ayse);
+	Ahmet.setPrefList(Zeynep);
+	Ahmet.setPrefList(Fatma);
 
-	Ayse.setPrefList(Hasan);
-	Ayse.setPrefList(Ali);
+	Mehmet.setPrefList(Ayse);
+	Mehmet.setPrefList(Kadriye);
+	Mehmet.setPrefList(Zeynep);
+	Mehmet.setPrefList(Fatma);
+
+	Ayse.setPrefList(Ahmet);
 	Ayse.setPrefList(Veli);
+	Ayse.setPrefList(Ali);
+	Ayse.setPrefList(Mehmet);
 	std::vector<Man> manList = Ayse.getPrefList();
 
-	Fatma.setPrefList(Ali);
 	Fatma.setPrefList(Veli);
-	Fatma.setPrefList(Hasan);
+	Fatma.setPrefList(Mehmet);
+	Fatma.setPrefList(Ahmet);
+	Fatma.setPrefList(Ali);
 
-	Hayriye.setPrefList(Hasan);
-	Hayriye.setPrefList(Veli);
-	Hayriye.setPrefList(Ali);
+	Zeynep.setPrefList(Ahmet);
+	Zeynep.setPrefList(Mehmet);
+	Zeynep.setPrefList(Ali);
+	Zeynep.setPrefList(Veli);
+	
+	Kadriye.setPrefList(Ali);
+	Kadriye.setPrefList(Veli);
+	Kadriye.setPrefList(Mehmet);
+	Kadriye.setPrefList(Ahmet);
 
 	while (!isAllEngaged)
 	{
@@ -76,6 +98,8 @@ int main() {
 			{
 				std::vector<Woman> prefList = man.getPrefList();
 				bool st = man.getStatus();
+				
+
 				if (!st)
 				{
 					// Kendine teklif getiren kizlara bakacak. Listede kendi nisanlisindan daha ustte biri varsa nisan atip yeni adayla nisanlanacak. 
@@ -122,9 +146,6 @@ int main() {
 	//std::cout << Ayse.getName();
 	//std::cout << Fatma.getName();
 	//std::cout << Hayriye.getName();
-
-	int a;
-	std::cin >> a;
 
 
 	return 0;
