@@ -98,7 +98,7 @@ int main() {
 			{
 				std::vector<Woman> prefList = man.getPrefList();
 				bool st = man.getStatus();
-				
+
 
 				if (!st)
 				{

@@ -27,24 +27,30 @@ class Man : public Person {
 private:
 	std::vector<Woman> prefList;
 	std::vector<Woman> messageBox;
+	Woman *fiance;
 public:
 	Man();
 	void setPrefList(Woman wIn);
 	std::vector<Woman> getPrefList();
 	void setMessageBox(Woman wIn);
 	std::vector<Woman> getMessageBox();
+	void setFiance(Woman *fianceIn);
+	Woman* getFiance();
 };
 
 class Woman : public Person {
 private:
 	std::vector<Man> prefList;
 	size_t round;
+	Man fiance;
 public:
 	Woman();
 	void setPrefList(Man mIn);
 	std::vector<Man> getPrefList();
 	void setRound(size_t roundIn);
 	size_t getRound();
+	void setFiance(Man fianceIn);
+	Man getFiance();
 };
 
 
@@ -97,6 +103,14 @@ void Man::setMessageBox(Woman wIn) {
 	messageBox.push_back(wIn);
 }
 
+void Man::setFiance(Woman *fianceIn) {
+	fiance = fianceIn;
+}
+
+Woman* Man::getFiance() {
+	return fiance;
+}
+
 
 
 Woman::Woman() {
@@ -121,4 +135,12 @@ void Woman::setRound(size_t roundIn) {
 
 size_t Woman::getRound() {
 	return round;
+}
+
+void Woman::setFiance(Man fianceIn) {
+	fiance = fianceIn;
+}
+
+Man Woman::getFiance() {
+	return fiance;
 }
