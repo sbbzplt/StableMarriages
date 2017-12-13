@@ -36,6 +36,17 @@ public:
 	std::vector<Woman> getMessageBox();
 	void setFiance(Woman *fianceIn);
 	Woman* getFiance();
+	bool operator ==(Man manIn)
+	{
+		bool r = false;
+		std::string name1 = this->getName();
+		std::string name2 = manIn.getName();
+		if (name1 == name2)
+		{
+			r = true;
+		}
+		return r;
+	}
 };
 
 class Woman : public Person {
@@ -51,6 +62,17 @@ public:
 	size_t getRound();
 	void setFiance(Man fianceIn);
 	Man getFiance();
+	bool operator ==(Woman womanIn)
+	{
+		bool r = false;
+		std::string name1 = this->getName();
+		std::string name2 = womanIn.getName();
+		if (name1 == name2)
+		{
+			r = true;
+		}
+		return r;
+	}
 };
 
 

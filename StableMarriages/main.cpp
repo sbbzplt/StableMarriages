@@ -28,6 +28,14 @@ int main() {
 	Zeynep.setName("Zeynep");
 	Kadriye.setName("Kadriye");
 
+	// Testing the operator overloading "=="
+	std::cout << (Ayse == Fatma) << std::endl;
+	std::cout << (Zeynep == Zeynep) << std::endl;
+	std::cout << (Mehmet == Ali) << std::endl;
+	std::cout << (Ahmet == Ahmet) << std::endl;
+	int a;
+	std::cin >> a;
+
 	Ali.setPrefList(Ayse);
 	Ali.setPrefList(Zeynep);
 	Ali.setPrefList(Kadriye);
@@ -98,7 +106,6 @@ int main() {
 			{
 				std::vector<Woman> prefList = man.getPrefList();
 				bool st = man.getStatus();
-
 
 				if (!st)
 				{
